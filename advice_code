@@ -1,0 +1,24 @@
+# advice.py
+# Random Advice Generator using Advice Slip API
+
+import requests
+
+def get_random_advice():
+    """
+    Fetches random advice from the Advice Slip API.
+    API: https://api.adviceslip.com/
+    """
+    url = "https://api.adviceslip.com/advice"
+    response = requests.get(url)
+
+    # Check if request was successful
+    if response.status_code == 200:
+        data = response.json()
+        advice = data["slip"]["advice"]
+        return advice
+    else:
+        return "Failed to fetch advice. Please try again later."
+
+if __name__ == "__main__":
+    print("💡 Your Random Advice:")
+    print(get_random_advice())
