@@ -10,9 +10,3 @@ A simple Python project that fetches random advice using the [Advice Slip API](h
 - Python  
 - Requests  
 - Jupyter/Colab  
-
-## How to Run  
-1. Clone or download this repo  
-2. Run the file:  
-   ```bash
-   python advice.py
